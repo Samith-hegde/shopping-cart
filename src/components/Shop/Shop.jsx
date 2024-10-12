@@ -4,7 +4,7 @@ import useInventory from '../../hooks/useInventory';
 import './Shop.css';
 
 function Shop() {
-    const inventory = useInventory();
+    const {inventory, changeQuantity} = useInventory();
     const [category, setCategory] = useState('all');
 
     function handleCategoryChange(newCategory) {
@@ -35,6 +35,15 @@ function Shop() {
                             <h3>{item.title}</h3>
                             <p>{item.price}</p>
                             <p>{item.category}</p>
+                            {item.quantityOrdered === 0 ? (
+                                <button onClick={() => changeQuantity(item.id, 'increment')}> Add to Cart </button>
+                            ) : (
+                                <section>
+                                    <button onClick={() => changeQuantity(item.id, 'decrement')}> - </button>
+                                    <p>{item.quantityOrdered}</p>
+                                    <button onClick={() => changeQuantity(item.id, 'increment')}> + </button>
+                                </section>
+                            )}
                         </li>
                     )
                 }

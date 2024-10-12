@@ -6,10 +6,29 @@ function useInventory() {
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then((response) => response.json())
-            .then((data) => setInventory(data));
+            .then((data) => {
+                for (let item of data) {
+                    item.quantityOrdered = 0;
+                }
+                setInventory(data)});
     }, []);
 
-    return inventory;
+    function changeQuantity(id, operation) {
+        setInventory((prevInventory) => {
+            return prevInventory.map((item) => {
+                if (item.id === id) {
+                    if (operation === 'decrement') {
+                        return { ...item, quantityOrdered: item.quantityOrdered - 1 };
+                    } else {
+                        return { ...item, quantityOrdered: item.quantityOrdered + 1 };
+                    }
+                }
+                return item;
+            });
+        });
+    }
+
+    return {inventory, changeQuantity};
 }
 
 export default useInventory;
