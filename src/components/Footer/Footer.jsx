@@ -7,7 +7,7 @@ function Footer() {
             <section className="top">
                 <section className="left">
                     <h3 className="header">© 2024 Angadi</h3>
-                    <p classname="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quisquam molestiae? Dignissimos, excepturi ipsum ipsam architecto alias vero voluptatem asperiores necessitatibus autem at voluptates veniam facilis obcaecati libero nobis eum. Eum, nesciunt nam fugit odio veritatis qui natus illum? Labore quisquam nobis eius quibusdam cupiditate sequi cumque veniam, recusandae, laudantium, tenetur ut magnam excepturi. Sequi vel repellat pariatur dolores atque.
+                    <p className="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, quisquam molestiae? Dignissimos, excepturi ipsum ipsam architecto alias vero voluptatem asperiores necessitatibus autem at voluptates veniam facilis obcaecati libero nobis eum. Eum, nesciunt nam fugit odio veritatis qui natus illum? Labore quisquam nobis eius quibusdam cupiditate sequi cumque veniam, recusandae, laudantium, tenetur ut magnam excepturi. Sequi vel repellat pariatur dolores atque.
 </p>
                 </section>
                 <section className="right">
