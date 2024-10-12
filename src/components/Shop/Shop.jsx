@@ -1,10 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import useInventory from '../../hooks/useInventory';
 import './Shop.css';
 
-function Shop() {
-    const {inventory, changeQuantity} = useInventory();
+function Shop({ inventory, changeQuantity }) {
     const [category, setCategory] = useState('all');
 
     function handleCategoryChange(newCategory) {
