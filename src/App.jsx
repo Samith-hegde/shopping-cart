@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home'
+import Shop from './components/Shop/Shop'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <Home />
+      <Shop />
       <Footer />
     </>
   )

@@ -4,7 +4,7 @@ import './Home.css';
 function Home() {
     
     return (
-        <div className="container">
+        <div className="home-container">
             <section>
                 <h1> YOUR ONE-STOP SHOP FOR EVERYTHING YOU LOVE </h1>
                 <h3> Welcome to Angadi! Why shop with us? </h3>
