@@ -7,11 +7,11 @@ function Total({ inventory }) {
         for (let item of inventory) {
             subtotal += item.price * item.quantityOrdered;
         }
-        return subtotal;
+        return Math.round(subtotal * 100) / 100;
     }
 
     function calculateGST() {
-        return calculateSubtotal() * 0.18;
+        return Math.round(calculateSubtotal() * 0.18 * 100) / 100;
     }
 
     function calculateTotal() {

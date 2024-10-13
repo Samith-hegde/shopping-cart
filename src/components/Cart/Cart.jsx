@@ -22,10 +22,10 @@ function Cart({ inventory, changeQuantity }) {
     if (!isEmpty) {
         return (
             <div className="cart-container">
-                {inventory.map((item) => {
-                if (item.quantityOrdered > 0) {
-                    return (
-                        <ul className="cart-items">
+                <ul className="cart-items">
+                    {inventory.map((item) => {
+                    if (item.quantityOrdered > 0) {
+                        return (
                             <li key={item.id}>
                                 <img src={item.image} alt={item.title} />
                                 <h3>{item.title}</h3>
@@ -37,11 +37,11 @@ function Cart({ inventory, changeQuantity }) {
                                     <button onClick={() => changeQuantity(item.id, 'increment')}> + </button>
                                 </section>
                             </li>
-                        </ul>
-                    )
-                }
-                })}
-                <Total inventory={inventory}/>
+                        )
+                    }
+                    })}
+                </ul>
+                <Total inventory={inventory} className="total"/>
             </div>
         )
     }

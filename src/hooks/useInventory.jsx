@@ -9,6 +9,7 @@ function useInventory() {
             .then((data) => {
                 for (let item of data) {
                     item.quantityOrdered = 0;
+                    item.price = item.price * 75;
                 }
                 setInventory(data)});
     }, []);

@@ -1,20 +1,32 @@
 .cart-container {
     display: flex;
-    justify-content: space-between;
     margin: 20px;
+    justify-content: space-around;
 }
 
 .cart-items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
+}
+
+.cart-items > li {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-items > li img {
+    max-width: 100px;
+    max-height: 100px;
 }
 
 .total {
     display: flex;
     flex-direction: column;
+    width: 500px;
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    margin-left: 20px;
 }
 
