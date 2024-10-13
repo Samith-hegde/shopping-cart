@@ -20,7 +20,7 @@ function Footer() {
             </section>
             <hr />
             <section className="bottom">
-                <p> Developed by <a href="https://github.com/Samith-hegde"> Samith Hegde </a></p>
+                <p> Developed by <a href="https://github.com/Samith-hegde" target="_blank"> Samith Hegde </a></p>
             </section>
         </footer>
     );
