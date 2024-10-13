@@ -40,8 +40,8 @@ function Cart() {
                                 </section>
                             </li>
                         )
+                    }})
                     }
-                    })}
                 </ul>
                 <Total inventory={inventory} className="total"/>
             </div>
