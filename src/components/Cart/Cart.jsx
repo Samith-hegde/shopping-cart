@@ -1,9 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import Total from './Total';
 import './Cart.css';
 
-function Cart({ inventory, changeQuantity }) {
+function Cart() {
+    const { inventory, changeQuantity } = useOutletContext();
     const [isEmpty, setIsEmpty] = useState(true);
 
     if (!inventory) {

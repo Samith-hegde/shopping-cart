@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
                     <li> Wide Range of Products: Find everything you need, from the latest tech gadgets to trendy clothing. </li>
                     <li> Fast & Secure Checkout: Enjoy a seamless shopping experience with quick and secure payment options. </li>
                 </ul>
-                <button> Shop Now </button>
+                <Link to="/shop"> <button> Shop Now </button> </Link> 
             </section>
 
             <section>

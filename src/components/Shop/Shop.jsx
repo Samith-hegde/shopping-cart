@@ -1,8 +1,10 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import  { useOutletContext } from 'react-router-dom';
 import './Shop.css';
 
-function Shop({ inventory, changeQuantity }) {
+function Shop() {
+    const { inventory, changeQuantity } = useOutletContext();
     const [category, setCategory] = useState('all');
 
     function handleCategoryChange(newCategory) {
