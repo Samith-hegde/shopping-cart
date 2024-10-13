@@ -31,7 +31,7 @@ function Shop({ inventory, changeQuantity }) {
                         <li key={item.id}>
                             <img src={item.image} alt={item.title} />
                             <h3>{item.title}</h3>
-                            <p>{item.price}</p>
+                            <p>Rs. {item.price}</p>
                             <p>{item.category}</p>
                             {item.quantityOrdered === 0 ? (
                                 <button onClick={() => changeQuantity(item.id, 'increment')}> Add to Cart </button>

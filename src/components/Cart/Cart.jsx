@@ -1,5 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
+import Total from './Total';
+import './Cart.css';
 
 function Cart({ inventory, changeQuantity }) {
     const [isEmpty, setIsEmpty] = useState(true);
@@ -19,15 +21,15 @@ function Cart({ inventory, changeQuantity }) {
 
     if (!isEmpty) {
         return (
-            <div className="shop-container">
-                <ul className="inventory-items">
-                    {inventory.map((item) => {
-                    if (item.quantityOrdered > 0) {
-                        return (
+            <div className="cart-container">
+                {inventory.map((item) => {
+                if (item.quantityOrdered > 0) {
+                    return (
+                        <ul className="cart-items">
                             <li key={item.id}>
                                 <img src={item.image} alt={item.title} />
                                 <h3>{item.title}</h3>
-                                <p>{item.price}</p>
+                                <p>Rs. {item.price}</p>
                                 <p>{item.category}</p>
                                 <section>
                                     <button onClick={() => changeQuantity(item.id, 'decrement')}> - </button>
@@ -35,11 +37,11 @@ function Cart({ inventory, changeQuantity }) {
                                     <button onClick={() => changeQuantity(item.id, 'increment')}> + </button>
                                 </section>
                             </li>
-                        )
-                    }
-                    return null;
-                    })}
-                </ul>
+                        </ul>
+                    )
+                }
+                })}
+                <Total inventory={inventory}/>
             </div>
         )
     }
