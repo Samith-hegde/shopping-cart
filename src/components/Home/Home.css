@@ -8,6 +8,7 @@
   
   .home-container section {
     flex: 1;
+    margin-left: 2rem;
   }
   
   .home-container h1 {
