@@ -1,32 +1,101 @@
 .cart-container {
     display: flex;
-    margin: 20px;
-    justify-content: space-around;
-}
-
-.cart-items {
+    margin: 2rem;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .cart-items {
+    flex: 1;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.cart-items > li {
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-items > li {
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
     align-items: center;
-}
-
-.cart-items > li img {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+  }
+  
+  .cart-items > li img {
     max-width: 100px;
     max-height: 100px;
-}
-
-.total {
+    object-fit: contain;
+  }
+  
+  .cart-items > li h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .cart-items > li p {
+    margin: 0.25rem 0;
+    color: #555;
+  }
+  
+  .cart-items > li section {
     display: flex;
-    flex-direction: column;
-    width: 500px;
-    flex-shrink: 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .cart-items > li section button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-
+    font-size: 1.2rem;
+    border-radius: 4px;
+  }
+  
+  .total {
+    flex: 0 0 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    align-self: flex-start;
+    position: sticky;
+    top: 100px;
+  }
+  
+  .total h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .total p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  .total hr {
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .cart-container {
+      flex-direction: column;
+    }
+  
+    .total {
+      position: static;
+      width: 100%;
+    }
+  }

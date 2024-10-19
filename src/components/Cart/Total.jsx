@@ -15,7 +15,7 @@ function Total({ inventory }) {
     }
 
     function calculateTotal() {
-        return calculateSubtotal() + calculateGST();
+        return Math.round((calculateSubtotal() + calculateGST()) * 100) / 100;
     }
     
     return (

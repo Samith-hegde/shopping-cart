@@ -1,21 +1,116 @@
 .shop-container {
     display: flex;
-    margin-top: 20px;
-    gap: 20px;
-}
-
-.inventory-items > li img {
-    max-width: 150px;
-    max-height: 150px;
-}
-
-.inventory-items {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-.categories {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+  
+  .categories {
+    flex: 0 0 200px;
     display: flex;
     flex-direction: column;
-    align-items: top;
-}
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .categories h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .categories button {
+    background-color: #f0f0f0;
+    border: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+  }
+  
+  .categories button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .inventory-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .inventory-items > li {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .inventory-items > li img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .inventory-items > li h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .inventory-items > li p {
+    margin: 0.25rem 0;
+    color: #555;
+  }
+  
+  .inventory-items > li button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  .inventory-items > li section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .inventory-items > li section button {
+    background-color: #f0f0f0;
+    color: #333;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+  }
+  
+  @media (max-width: 768px) {
+    .shop-container {
+      flex-direction: column;
+    }
+  
+    .categories {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .categories button {
+      width: auto;
+    }
+  }
